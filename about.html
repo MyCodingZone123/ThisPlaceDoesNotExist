@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This Place Does Not Exist</title>
+  <link rel="stylesheet" href="css/desktop.css" type="text/css">
+  <link rel="stylesheet" href="css/tablet.css" type="text/css">
+  <link rel="stylesheet" href="css/mobile.css" type="text/css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <ul class="nav1">
+          <li class="navLogo"><a href = "index.html">ThisPlace<br/>DoesNotExist</a></li>
+          <li class="navItem"><a href = "index.html">Home</a></li>
+          <li class="navItem active"><a href = "about.html">About</a></li>
+          <li class="navItem"><a href = "index.html#generate_image"><button class="buttons" type="button"> Generate </button></a></li>
+        </ul>
+      </nav>
+    </header>
+
+      <p>Scroll Up and Down this page to see the parallax scrolling effect.</p>
+
+      <div class="parallax1" id="issue1"></div>
+
+      <div class="scrollable-div">
+      <h2 style="text-align: left;">Machine Learning (ML)</h2>
+      <br>
+      <p>Machine learning (ML) is a type of artificial intelligence (AI) that allows software applications to become more accurate at predicting outcomes without being explicitly programmed to do so.</p>
+      <br>
+      <p>Its algorithms use historical data as input to predict new output values. It is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome.  </p>
+      <br>
+      <p>Machine learning algorithms are used in a wide variety of applications, including medicine, email filtering, speech recognition, and computer vision, where it is difficult or unfeasible to develop conventional algorithms to perform the needed tasks.</p>
+      <br>
+      <p class="issue_source">Sources:</p>
+      <p class="issue_source"><a href="https://paperswithcode.com/method/stylegan">https://paperswithcode.com/method/stylegan</a></p>
+      <p class="issue_source"><a href="https://machinelearningmastery.com/introduction-to-style-generative-adversarial-network-stylegan/">https://machinelearningmastery.com/introduction-to-style-generative-adversarial-network-stylegan/</a></p>
+      <p class="issue_source"><a href="https://www.sas.com/en_us/insights/analytics/machine-learning.html">https://www.sas.com/en_us/insights/analytics/machine-learning.html</a></p>
+      </div>
+
+      <div class="parallax2" id="issue2"></div>
+
+      <div class="scrollable-div">
+      <h2 style="text-align : left">Behind the Scene</h2>
+      <br>
+      <p>The fictional place generator on this site is essentially powered by a styleGAN (Generative Adversarial Network) model behind the scene. The model works by having two neural networks: a generator and a discriminator. Both the generator and discriminator work simultaneously during the training process.</p>
+      <br>
+      <p>In this case, the generator synthesizes samples of fictional places based on the pattern it identified from the real images of iconic cities worldwide, while a discriminator takes samples from both the training data and the generator’s output and predicts if they are “real” or “fake”.</p>
+      <br>
+      <p>The generator input is a random vector (noise) and therefore its initial output is also noise. Over time, as it receives feedback from the discriminator, it learns to synthesize more “realistic” images. The discriminator also improves over time by comparing generated samples with real samples, making it harder for the generator to deceive it.</p>
+      <br>
+      <p class="issue_source">Sources:</p>
+      <p class="issue_source"><a href="https://www.nationalgeographic.org/encyclopedia/air-pollution/">https://www.nationalgeographic.org/encyclopedia/air-pollution/</a></p>
+      <p class="issue_source"><a href="https://www.cdc.gov/climateandhealth/effects/air_pollution.htm">https://www.cdc.gov/climateandhealth/effects/air_pollution.htm</a></p>
+      <p class="issue_source"><a href="https://www.epa.gov/clean-air-act-overview/air-pollution-current-and-future-challenges">https://www.epa.gov/clean-air-act-overview/air-pollution-current-and-future-challenges</a></p>
+      </div>
+
+      <div class="parallax3" id="issue2"></div>
+
+      <div class="scrollable-div">
+      <h2 style="text-align : left">More</h2>
+      <br>
+      <p>The dataset of this StyleGAN model is composed of approximately 5,000 images taken at iconic cities worldwide. The fictional generated images of cities are results from a StyleGan model that has been trained for more than 100 hours. The model is trained using Google Colab that is conncted to a hosted network. It is an example of unsupervised machine learning.</p>
+      <br>
+      <p class="issue_source">Dataset Credits:</p>
+      <p class="issue_source"><a href="https://unsplash.com/s/photos/city">https://unsplash.com/s/photos/city</a></p>
+      <p class="issue_source"><a href="https://www.pexels.com/search/city/">https://www.pexels.com/search/city/</a></p>
+      <p class="issue_source"><a href="https://pixabay.com/images/search/city/">https://pixabay.com/images/search/city/</a></p>
+      <p class="issue_source"><a href="https://www.shutterstock.com/search/city">https://www.shutterstock.com/search/city</a></p>
+      <p class="issue_source"><a href="https://depositphotos.com/stock-photos/cities.html">https://depositphotos.com/stock-photos/cities.html</a></p>
+      </div>
+
+      <footer>
+        <p> Terms of Use </P>
+        <p> Privacy Policy </P>
+        <p> Help </P>
+      </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  	<script src="script.js"></script>
+  	<script>
+  	(function() {
+  		window.onload = () => {
+  			app.initialize();
+  		}
+  	})();
+  	</script>
+</body>
+
+</html>

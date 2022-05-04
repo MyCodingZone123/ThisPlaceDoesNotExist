@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This Place Does Not Exist</title>
+  <link rel="stylesheet" href="css/desktop.css" type="text/css">
+  <link rel="stylesheet" href="css/tablet.css" type="text/css">
+  <link rel="stylesheet" href="css/mobile.css" type="text/css">
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <nav>
+        <ul class="nav1">
+          <li class="navLogo"><a href = "index.html">ThisPlace<br/>DoesNotExist</a></li>
+          <li class="navItem active"><a href = "index.html">Home</a></li>
+          <li class="navItem"><a href = "about.html">About</a></li>
+          <li class="navItem"><a href = "index.html#generate_image"><button class="buttons" type="button"> Generate </button></a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="main_display">
+      <img src='images/main_image.jpg'/>
+      <!-- <h1> Welcome to the Immersive Universe!!! </h1> -->
+    </section>
+
+<div class="ML_Generator">
+      <h1 class="generate_h1">Fictional Places Generator</h1>
+      <section class="generator" id="generate_image">
+          <div class="item" id="issue_item1">
+            <!-- <section class="itemImage"> -->
+            <img src="images/default.png"/>
+            <!-- <div class="image_label">Global Warming</div>
+            </section>
+            <section class="itemText"> <p>-->
+          </div>
+          </section>
+  </div>
+
+<div class="control_buttons">
+<button class="buttons" id="generatenewimage" type="button" onclick="getRandomImage()"> Generate </button>
+<!-- <button onclick = "getRandomImage()"> Generate Image </button> -->
+<button class="buttons" id="downloadnewimage" type="button" onclick="download()"> Download </button></a>
+<!-- <button class="buttons" type="button"> Download </button> -->
+</div>
+
+
+      <footer>
+        <p> Terms of Use </P>
+        <p> Privacy Policy </P>
+        <p> Help </P>
+      </footer>
+  </div>
+
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+	<!-- <script src="script.js"></script> -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script>
+  // const element = document.getElementById("generatenewimage");
+  // element.addEventListener("click", getRandomImage());
+  var randomImage = new Array();
+  var number;
+  let photo;
+
+
+  function getRandomImage() {
+  //declare an array to store the images
+  // var randomImage = new Array();
+
+  //insert the URL of images in array
+  randomImage[0] = "https://live.staticflickr.com/65535/52049619376_7a82ab252e.jpg";
+  randomImage[1] = "https://live.staticflickr.com/65535/52050115375_3c9d860462.jpg";
+  randomImage[2] = "https://live.staticflickr.com/65535/52049653328_074d746de3.jpg";
+  randomImage[3] = "https://live.staticflickr.com/65535/52049653403_9ff4cfb89b.jpg";
+  randomImage[4] = "https://live.staticflickr.com/65535/52049619546_86f5ba1a2b.jpg";
+  randomImage[5] = "https://live.staticflickr.com/65535/52048560127_4a59842845.jpg";
+  randomImage[6] = "https://live.staticflickr.com/65535/52049854334_bdd7987843.jpg"
+  randomImage[7] = "https://live.staticflickr.com/65535/52050115685_014191fe5f.jpg"
+  randomImage[8] = "https://live.staticflickr.com/65535/52049653703_42cb810994.jpg"
+  randomImage[9] = "https://live.staticflickr.com/65535/52049653743_25888436ec.jpg"
+  randomImage[10] = "https://live.staticflickr.com/65535/52050115785_ae22dd452a.jpg"
+  randomImage[11] = "https://live.staticflickr.com/65535/52050115850_78d76efb9d.jpg"
+  randomImage[12] = "https://live.staticflickr.com/65535/52050115850_78d76efb9d.jpg"
+  randomImage[13] = "https://live.staticflickr.com/65535/52049619866_6019da8dd4.jpg"
+  randomImage[14] = "https://live.staticflickr.com/65535/52050115915_62143ebcbd.jpg"
+  randomImage[15] = "https://live.staticflickr.com/65535/52050115975_45c992b661.jpg"
+  randomImage[16] = "https://live.staticflickr.com/65535/52050116025_131f5a54ab.jpg"
+  randomImage[17] = "https://live.staticflickr.com/65535/52048560667_897814ec2b.jpg"
+  randomImage[18] = "https://live.staticflickr.com/65535/52049654048_9cf7c0b394.jpg"
+  randomImage[19] = "https://live.staticflickr.com/65535/52049620066_a12464a45e.jpg"
+  randomImage[20] = "https://live.staticflickr.com/65535/52049654138_1bb095420a.jpg"
+  randomImage[21] = "https://live.staticflickr.com/65535/52049654188_22f4b1d098.jpg"
+  randomImage[22] = "https://live.staticflickr.com/65535/52048560922_9c13648a6d.jpg"
+  randomImage[23] = "https://live.staticflickr.com/65535/52049855024_fb43114bc1.jpg"
+  randomImage[24] = "https://live.staticflickr.com/65535/52049620251_6855148f41.jpg"
+  randomImage[25] = "https://live.staticflickr.com/65535/52049654343_29f888fb39.jpg"
+  randomImage[26] = "https://live.staticflickr.com/65535/52049855154_72b62d7d63.jpg"
+  randomImage[27] = "https://live.staticflickr.com/65535/52049855189_8fd14352a1.jpg"
+  randomImage[28] = "https://live.staticflickr.com/65535/52049855239_1de56d0487.jpg"
+  randomImage[29] = "https://live.staticflickr.com/65535/52049620476_1ebf27ba12.jpg"
+  randomImage[30] = "https://live.staticflickr.com/65535/52049620506_52528b7cc6.jpg"
+  randomImage[31] = "https://live.staticflickr.com/65535/52049620541_7a1378f39c.jpg"
+  randomImage[32] = "https://live.staticflickr.com/65535/52049620621_93c377e6d8.jpg"
+  randomImage[33] = "https://live.staticflickr.com/65535/52049215759_6b1b7dab1e.jpg"
+  randomImage[34] = "https://live.staticflickr.com/65535/52048977201_83a727a8d4.jpg"
+
+
+  //generate a number and provide to the image to generate randomly
+  number = Math.floor(Math.random()*randomImage.length);
+
+  //return the images generated by a random number
+  return document.getElementById("issue_item1").innerHTML = '<img src="'+randomImage[number]+'"/>';
+  }
+
+  function download(){
+            axios({
+                url:randomImage[number],
+                method:'GET',
+                responseType: 'blob'
+        })
+        .then((response) => {
+               const url = window.URL
+               .createObjectURL(new Blob([response.data]));
+                      const link = document.createElement('a');
+                      link.href = url;
+                      link.setAttribute('download', 'image.jpg');
+                      document.body.appendChild(link);
+                      link.click();
+        })
+        }
+
+
+
+        // function preload() {
+        //   let url = randomImage[number]
+        //   photo = loadImage('url');
+        // }
+        //
+        // function draw() {
+        //   image(photo, 0, 0);
+        // }
+        //
+        // function download() {
+        //   if (key === 's') {
+        //     photo.save('photo', 'png');
+        //   }
+        // }
+
+	</script>
+
+</body>
+
+</html>
