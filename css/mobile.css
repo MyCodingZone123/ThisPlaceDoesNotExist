@@ -18,7 +18,7 @@
     display : flex;
     justify-content :space-evenly;
     align-items: center;
-    background-color : rgba(105,186,74,1);
+    background-color : rgba(1,0,121,1);
     border : solid 0px red;
     height:60px;
     font-size : 15pt;
@@ -31,14 +31,14 @@
   .navLogo a {
     text-decoration: none;
     color : rgba(255,255,255,1);
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     font-family:serif;
-    font-size:15pt;
+    font-size:13pt;
   }
 
   .navItem a {
     text-decoration: none;
-    color : rgba(10,10,10,1);
+    color : rgba(255,255,255,1);
   }
 
   .active {
@@ -53,8 +53,29 @@
     border-bottom: 3px solid rgba(249,125,49,1);
   }
 
+
   .navLogo{
     display: none;
+  }
+
+  .buttons{
+    background-color: rgba(249,125,49,1);
+    color : rgba(255,255,255,1);
+    /* justify-content: center; */
+    margin: 5px;
+    font-size : 13pt;
+    font-weight:bold;
+    padding :5px;
+    width : 110px;
+    height: 45px;
+    border: none;
+    border-radius:10px;
+  }
+
+  .control_buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .main_image{
@@ -505,18 +526,32 @@
 
   .item {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     border : solid 0px orange;
-    padding-top: 50px;
-    margin : 30px;
+    /* padding-top: 10px; */
+    /* margin-top: 20px; */
+    margin-bottom: 0px;
     font-family:helvetica;
     font-size: 20px;
     border-radius: 20px;
-    width: 240px;
-    height: 360px;
+    width: 341.333px;
+    height: 341.333px;
     -webkit-filter: drop-shadow(5px 5px 5px #555555);
     filter: drop-shadow(5px 5px 5px #555555);
+  }
+
+  #issue_item1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .generator {
+    border: solid 0px red;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
   }
 
   .itemImage {
@@ -532,11 +567,28 @@
 
   .item img{
     border: solid 1px black;
-    width:100%;
-    height:100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    width:70%;
+    height:70%;
+    border-radius: 20px;
   }
+
+  .generate_h1{
+    margin-top:50px;
+    font-size:30pt;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+  }
+
+  #generatenewimage {
+       margin: 30px;
+  }
+
+  #downloadnewimage {
+       margin: 30px;
+  }
+
+
 
   .image_label{
     display:flex;
@@ -614,7 +666,7 @@
 
   .parallax1 {
     /* The image used */
-    background-image: url('../images/icemelt.jpeg');
+    background-image: url('../images/ml.jpeg');
 
     /* Set a specific height */
     min-height: 80vh;
@@ -625,12 +677,12 @@
     background-size: cover;
     position: relative;
 
-    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 80%), url('../images/icemelt.jpeg') center center / cover fixed;
+    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 80%), url('../images/ml.jpeg') center center / cover fixed;
   }
 
   .parallax2 {
     /* The image used */
-    background-image: url('../images/pollution.jpeg');
+    background-image: url('../images/ml2.jpeg');
     min-height: 80vh;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -639,12 +691,12 @@
     background-size: cover;
     position: relative;
 
-    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 80%), url('../images/pollution.jpeg') center center / cover fixed;
+    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 80%), url('../images/ml2.jpeg') center center / cover fixed;
   }
 
   .parallax3 {
     /* The image used */
-    background-image: url('../images/deforestation.jpeg');
+    background-image: url('../images/data.png');
     min-height: 80vh;
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -653,21 +705,7 @@
     background-size: cover;
     position: relative;
 
-    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 80%), url('../images/deforestation.jpeg') center center / cover fixed;
-  }
-
-  .parallax4 {
-    /* The image used */
-    background-image: url('../images/wildfire.jpeg');
-    min-height: 80vh;
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 80%), url('../images/wildfire.jpeg') center center / cover fixed;
+    background: linear-gradient(0deg, rgba(20,20,20,1) 0%, rgba(20,20,20,0) 80%), url('../images/data.png') center center / cover fixed;
   }
 
   .scrollable-div {
@@ -945,12 +983,12 @@
     align-items: center;
     width: 100%;
     min-height: 80px;
-    background-color : rgba(105,186,74,1);
+    background-color : rgba(1,0,121,1);
     color: white;
     font-size: 13pt;
     clear: both;
     position: relative;
-    bottom:-25rem;
+    /* bottom:-5rem; */
   }
 
   .search_bar {

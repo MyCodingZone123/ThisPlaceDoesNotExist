@@ -18,7 +18,7 @@ nav ul{
   display : flex;
   justify-content :space-around;
   align-items: center;
-  background-color : rgba(105,186,74,1);
+  background-color : rgba(1,0,121,1);
   border : solid 0px red;
   height:60px;
   font-size : 19pt;
@@ -30,7 +30,7 @@ nav ul{
 
 .navLogo a {
   text-decoration: none;
-  color : rgba(255,255,255,1);
+  color : rgba(213,173,54,1);
   letter-spacing: 5px;
   font-family:serif;
   font-size:20pt;
@@ -38,7 +38,7 @@ nav ul{
 
 .navItem a {
   text-decoration: none;
-  color : rgba(10,10,10,1);
+  color : rgba(255,255,255,1);
 }
 
 .active {
@@ -805,7 +805,7 @@ footer {
   align-items: center;
   width: 100%;
   min-height: 100px;
-  background-color : rgba(105,186,74,1);
+  background-color : rgba(1,0,121,1);
   color: white;
   font-size: 16pt;
   clear: both;
